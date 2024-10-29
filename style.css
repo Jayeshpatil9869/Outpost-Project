@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'gilroy';
+    src: url('./assets/fonts/Gilroy-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'bradford';
+    src: url(./assets/fonts/BradfordLLSub-Light.2b80bd6.ttf);
+}
+@font-face {
+    font-family: 'bradford-light';
+    src: url(./assets/fonts/BradfordLLWeb-Light.88f68c6.ttf);
+}
+@font-face {
+    font-family: 'grotesk';
+    src: url(./assets/fonts/Scto\ Grotesk\ A\ Medium.c0bd1de.ttf);
+}
+@font-face {
+    font-family: 'grotesk-light';
+    src: url(./assets/fonts/Scto\ Grotesk\ A\ Regular.b49ff1e.ttf);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +30,7 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
 :root{
     --bg-color: #80808020;
     --text-color: #000;
@@ -19,26 +43,93 @@ html, body{
     align-items: center;
     position: fixed;
     z-index: -1;
-        background: var(--bg-color);
 }
-/* .layer{
+.layer{
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #03030330;
-}    */
+    background-color: #ffffffb6;
+}   
+
+.openMenu{
+    height: 100%;
+    width: 100%;
+    background-color: #B96036;
+    position: absolute;
+    z-index: 9;
+
+}
+
+
+nav{
+    position: fixed;
+    z-index: 99;
+    top: 0%;
+    left: 0%;
+    padding: 2.7vw 2.8vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "grotesk-light";
+
+}
+
+nav h1 svg{
+    height: auto;
+    width: 12vh;
+}
+
+nav img{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,0%);
+    height: 18vh;
+    opacity: 0.2;
+}
+
+nav a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.2vh;
+    bottom: 0;
+    left: 0;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page{
     height: 100vh;
     width: 100%;
-    border: 1px solid var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #000;
 }
-.page h1{
-    font-size: 100px;
-    color: var(--text-color);
-    mix-blend-mode: difference;
-}
-
