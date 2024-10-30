@@ -211,6 +211,69 @@ function page2Video(){
 }
 
 
+function allAnimations(){
+  let tl2 = gsap.timeline();
+
+    tl2.to("nav",{
+      transform: "translateY(0%)",
+      duration: 0.4,
+      ease: "power2.inOut",
+      opacity: 1,
+      scrub: 1,
+    })
+    tl2.to(".page1Text h1",{
+      transform: "translateY(0%)",
+      duration: 0.4,
+      ease: "power2.inOut",
+      stagger: 0.2,
+      scrub: 2,
+      opacity: 1,
+    }),
+    tl2.to(".page1SmallText h2",{
+      transform: "translateY(0%)",
+      duration: 0.4,
+      ease: "power2.inOut",
+      stagger: 0.2,
+      scrub: 2,
+      opacity: 1,
+    })
+    tl2.to(".container",{
+      transform: "translateY(0%)",
+      opacity: 1,
+    })
+    
+    tl2.to(".page2VideoDiv",{
+      transform: "translateY(0%)",
+      opacity: 1,
+    })
+
+    tl2.to(".page3TextContent h1",{
+      scrollTrigger: {
+        trigger: ".page3",
+        scroller: "main",
+        start: "top 50%",
+        end: "top 40%",
+        scrub: 1,        
+      },
+      transform: "translateY(0%)",
+      opacity: 1, 
+    })
+
+    tl2.to(".page4Cont",{
+      scrollTrigger: {
+        trigger: ".page4",
+        scroller: "main",
+        start: "top 80%",
+        end: "top 70%",
+        scrub: 1,      
+        markers: true,  
+      },
+      transform: "translateY(0%)",
+      opacity: 1, 
+    })
+
+
+}
 
 
 
@@ -221,4 +284,5 @@ Shery.makeMagnet(".magnet-target");
 locom();
 cursor();
 menuToggle();
+allAnimations();
 page2Video();

@@ -250,6 +250,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-family: "grotesk-light";
+  transform: translateY(-100%);
+  opacity: 0; 
 }
 
 nav h1 svg {
@@ -310,6 +312,7 @@ a:hover::after,
   font-family: "grotesk-light";
   padding-top: 7vw;
   position: relative;
+  overflow: hidden;
 }
 .page1SmallText {
   position: absolute;
@@ -321,6 +324,8 @@ a:hover::after,
   line-height: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
+  transform: translateY(100%);
+  opacity: 0;
 }
 .page1Text h1 {
   padding-top: 4vh;
@@ -331,6 +336,8 @@ a:hover::after,
   letter-spacing: -0.5rem;
   font-weight: 100;
   flex-wrap: wrap;
+  transform: translateY(100%);
+  opacity: 0;
 }
 .spanText1 {
   padding-left: 6vw;
@@ -351,6 +358,8 @@ a:hover::after,
   position: absolute;
   bottom: 6%;
   right: 4%;
+  transform: translateY(100%);
+  opacity: 0;
 }
 .arrow {
   position: absolute;
@@ -412,6 +421,8 @@ a:hover::after,
   height: 100%;
   width: 100%;
   overflow: hidden;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .page2VideoDiv video {
@@ -440,11 +451,14 @@ a:hover::after,
   height: 100%;
   width: 83%;
   padding: 13vw 8vw;
+  overflow: hidden;
 }
 .page3TextContent h1 {
   font-size: 3.3vw;
   line-height: 3.3vw;
   font-weight: 100;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .page3SmallText {
@@ -588,6 +602,8 @@ a:hover::after,
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .page4Cont .textImgDiv {
@@ -739,3 +755,21 @@ a:hover::after,
 .page8Cont{
   border-bottom: 1px solid #0000005c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
