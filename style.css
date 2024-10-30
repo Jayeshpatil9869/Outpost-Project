@@ -578,6 +578,8 @@ a:hover::after,
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -6vh;
+
 }
 .page4Cont {
   height: 90%;
@@ -665,10 +667,10 @@ a:hover::after,
 .page5, .page7 {
   height: 100vh;
   width: 100%;
-  position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  margin-bottom: -8vh;
 }
 
 .page5Cont {
@@ -732,4 +734,8 @@ a:hover::after,
 .page5Text h1:nth-child(3) {
   height: 15%;
   margin-bottom: 3vh;
+}
+
+.page8Cont{
+  border-bottom: 1px solid #0000005c;
 }
