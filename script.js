@@ -74,7 +74,20 @@ function menuToggle(){
     let openMenu = document.querySelector(".openMenu");
     let plusImg = document.querySelector(".plusImg");
 
+    let cursor = document.querySelector(".cursor");
+    let cursor2 = document.querySelector(".cursor2");
     let flag = 0;
+
+    menubtn.addEventListener("mouseover", function(){
+      cursor.style.height = "65px";
+      cursor.style.width = "65px";
+      cursor2.style.scale = "0";
+    })
+    menubtn.addEventListener("mouseleave", function(){
+      cursor.style.height = "30px";
+      cursor.style.width = "30px";
+      cursor2.style.scale = "1";
+    })
 
     menubtn.addEventListener("click",function(){
         if(flag == 0){
@@ -142,7 +155,70 @@ function menuTextAnimation(){
     })
 }
 
+function page2Video(){
+  let page2VideoDiv = document.querySelector(".page2VideoDiv");
+  let plusImg = document.querySelector(".plusImg");
+
+  gsap.to(".page2VideoDiv", {
+    scrollTrigger: {
+      trigger: ".page2",
+      scroller: "main",
+      // markers: true,
+      start: "top 90%", 
+      end: "top 5%",
+      scrub: 2,
+      ease: "power2.inOut"
+    },
+    onUpdate: () => {
+      if(page2VideoDiv.getBoundingClientRect().top < plusImg.getBoundingClientRect().top){
+        plusImg.style.opacity = 0;
+      }
+      else{
+        plusImg.style.opacity = 0.2;
+      }
+    },
+    scale: 1.4,
+    transformOrigin: "left 0%",
+    duration: 0.2,
+    ease: "power2.inOut"
+  });
+  gsap.set(".page2VideoDiv", {
+    scale: 1,
+    transformOrigin: "left 0%"
+  });
+
+  gsap.to(".page2VideoDiv", {
+    duration: 1.5,
+    ease: "power2.inOut",
+    scale: 1,
+    transformOrigin: "left 0%"
+  });
+  
+  gsap.to(".page2",{
+    scrollTrigger: {
+      trigger: ".page3",
+      scroller: "main",
+      start: "top 2%",
+      end: "top 90%",
+      scrub: 1,
+    },
+    onUpdate: () => {
+      if(page2VideoDiv.getBoundingClientRect().top < plusImg.getBoundingClientRect().top){
+        plusImg.style.opacity = 0.2;
+      }
+    }
+  })
+}
+
+
+
+
+
+
+Shery.makeMagnet(".magnet-target");
+
+
 locom();
 cursor();
 menuToggle();
-
+page2Video();
