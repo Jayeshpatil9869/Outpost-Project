@@ -266,7 +266,7 @@ function allAnimations(){
         start: "top 80%",
         end: "top 70%",
         scrub: 1,      
-        markers: true,  
+        // markers: true,  
       },
       transform: "translateY(0%)",
       opacity: 1, 
