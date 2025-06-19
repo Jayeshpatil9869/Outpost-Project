@@ -1,4 +1,4 @@
-# Outpost Design Website Clone
+# Outpost Design Website Clone!
 
 A modern, responsive clone of the [Outpost Design](https://outpost.design/) website, created as part of an Awwwards-inspired web development project. This project showcases advanced front-end development skills, including animations, responsiveness, and sleek UI design. Perfect for designers, developers, and anyone interested in top-notch web experiences.
 
